@@ -33,7 +33,7 @@ const FSharp = ({ notes, note, setNotes }) => {
       copy[note] = !copy[note]
       setNotes(copy)
     }} 
-    className="key black">
+    className={notes[note] ? "selected key black" : "key black"}>
     </div>
   );
 };

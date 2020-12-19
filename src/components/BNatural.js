@@ -33,7 +33,7 @@ const BNatural = ({ notes, note, setNotes }) => {
       copy[note] = !copy[note]
       setNotes(copy)
     }} 
-    className="key white">
+    className={notes[note] ? "selected key white" : "key white"}>
     </div>
   );
 };

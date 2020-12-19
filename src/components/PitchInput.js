@@ -47,8 +47,8 @@ export default function PitchInput() {
   }
 
   return (
-    <div>
-      <button onClick={() => whatKey(notes)} >Determine Key</button>
+    <div className="piano-container">
+      <button className="keyFinder" onClick={() => whatKey(notes)} >Determine Key</button>
       <div className="piano">
         <CNatural note="C" notes={notes} setNotes={setNotes} />
         <CSharp  note="C#" file={C} notes={notes} setNotes={setNotes} />
