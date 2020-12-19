@@ -19,7 +19,7 @@ export default function Results({ results, setResults }) {
                 <p className="result-title">
                     Matches in Key
                 </p>
-                <div className="matches" style={{width: result.matches * 20 + 'px'}}>
+                <div className="matches" style={{width: result.matches * 30 + 'px'}}>
                   <div className="match-number">
                     {result.matches}
                   </div>
