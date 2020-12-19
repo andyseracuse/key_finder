@@ -19,8 +19,6 @@ body {
 .key {
   height: calc(var(--width) * 4);
   width: var(--width);
-  max-width: 90px;
-
 }
 
 .black {
@@ -31,6 +29,7 @@ body {
   margin-right: calc(var(--width) / -2);
   z-index: 2;
   max-height: 230px;
+  max-width: 70px;
 }
 
 .white {
@@ -38,6 +37,7 @@ body {
   background-color: white;
   border: 1px solid #333;
   max-height: 357px;
+    max-width: 90px;
 }
 
 .keyFinder {
