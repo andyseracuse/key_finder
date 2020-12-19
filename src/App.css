@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Helvetica Neue";
+  font-family: Arial;
 }
 
 .piano{
@@ -19,6 +19,8 @@ body {
 .key {
   height: calc(var(--width) * 4);
   width: var(--width);
+  max-width: 90px;
+
 }
 
 .black {
@@ -28,12 +30,14 @@ body {
   margin-left: calc(var(--width) / -2);
   margin-right: calc(var(--width) / -2);
   z-index: 2;
+  max-height: 230px;
 }
 
 .white {
   --width: 10vw;
   background-color: white;
-  border: 1px solid #333
+  border: 1px solid #333;
+  max-height: 357px;
 }
 
 .keyFinder {
@@ -60,4 +64,60 @@ body {
 
 .selected.white{
   background-color: rgb(179, 127, 93);
+}
+
+.results-container{
+  border-radius: 10px;
+  background: rgb(168, 168, 168);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+  max-height: 30vh;
+  overflow: auto;
+}
+
+.result {
+  display: flex;
+  justify-content: space-around;
+  width: 50%
+}
+
+.matches{
+  background-color: #e37518bf;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  border-radius: 0 5px 5px 0;
+  margin-top: 11px;
+  
+}
+
+.result-title {
+  font-weight: bold;
+  color: white;
+}
+.match-number{
+  margin-left: 8px;
+}
+
+.result-container{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: 0 10px 0 10px
+}
+
+.key-name{
+  color: white;
+  margin: auto 0 auto 0;
+  font-size: 30px;
+  border: solid grey 2px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 1.8;
+  border-radius: 8px;
+  background: #bea491;
 }

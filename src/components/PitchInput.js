@@ -11,6 +11,7 @@ import GSharp from './GSharp'
 import ANatural from './ANatural'
 import ASharp from './ASharp'
 import BNatural from './BNatural'
+import Results from './Results'
 
 import C from '../notes/C.mp3'
 
@@ -18,6 +19,7 @@ import C from '../notes/C.mp3'
 export default function PitchInput() {
 
   const [notes, setNotes] = useState({"C": false, "C#": false, "D": false, "D#": false, "E": false, "F": false, "F#": false, "G": false, "G#": false, "A": false, "A#": false, "B": false})
+  const [results, setResults] = useState([])
 
   const whatKey = function(obj) {
     const arr = [];
@@ -43,7 +45,7 @@ export default function PitchInput() {
         out.push({key: notes[i], matches: matches.length})
       }
     }
-    console.log(out.sort((a, b) => b.matches - a.matches))
+    setResults(out.sort((a, b) => b.matches - a.matches))
   }
 
   return (
@@ -63,6 +65,7 @@ export default function PitchInput() {
         <ASharp note="A#" notes={notes} setNotes={setNotes} />
         <BNatural note="B" notes={notes} setNotes={setNotes} />
       </div>
+      <Results results={results} setResults={setResults} />
     </div>
   )
 }
