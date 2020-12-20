@@ -13,7 +13,7 @@ http://whatkey.xyz
 
 - 
 
-![Imgur](https://imgur.com/nciAHhS)
+![Imgur](https://i.imgur.com/nciAHhS.gif)
 
 ## Tech Frameworks Used
 
