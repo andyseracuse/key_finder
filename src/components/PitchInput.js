@@ -35,14 +35,22 @@ export default function PitchInput() {
     for (let i = 0; i < 12; i++) {
       let noteIndex = i;
       const matches = [];
+      const mismatch = [];
       for(let j = 0; j < pattern.length; j++) {
         if(arr.includes(notes[noteIndex])){
           matches.push(notes[noteIndex]);
-        }
+        } 
         noteIndex += pattern[j]
       }
+      if (matches.length !== arr.length) {
+        for (let k = 0;  k < arr.length; k++) {
+          if (!matches.includes(arr[k])) {
+            mismatch.push(arr[k])
+          }
+        }
+      }
       if (matches.length > 0) {
-        out.push({key: notes[i], matches: matches.length})
+        out.push({key: notes[i], matches: matches.length, mismatches: mismatch.length})
       }
     }
     setResults(out.sort((a, b) => b.matches - a.matches))
