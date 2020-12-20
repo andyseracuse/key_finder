@@ -11,7 +11,7 @@ http://whatkey.xyz
 
 ## Demo gifs
 
-- ![Imgur](https://i.imgur.com/nciAHhS.gif)
+![Imgur](https://i.imgur.com/nciAHhS.gif)
 
 ## Tech Frameworks Used
 
