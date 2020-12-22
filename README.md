@@ -8,6 +8,7 @@ http://whatkey.xyz
 
 ## Coming Soon
 - key finding analysis algorithm improvements
+- microphone input option (analyzes audio provided to microphone to determine key)
 
 ## Demo gifs
 
