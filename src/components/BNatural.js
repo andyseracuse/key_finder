@@ -24,16 +24,16 @@ const useAudio = file => {
 };
 
 const BNatural = ({ notes, note, setNotes }) => {
-  const [playing, toggle] = useAudio(B);
+  const [audio] = useState(new Audio(B));
 
   return (
     <div onClick={() => {
-      toggle()
+      audio.play()
       let copy = {...notes}
       copy[note] = !copy[note]
       setNotes(copy)
-    }} 
-    className={notes[note] ? "selected key white" : "key white"}>
+      }} 
+      className={notes[note] ? "selected key white" : "key white"}>
     </div>
   );
 };

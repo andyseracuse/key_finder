@@ -24,11 +24,11 @@ const useAudio = file => {
 };
 
 const GSharp = ({ notes, note, setNotes }) => {
-  const [playing, toggle] = useAudio(Gsharp);
+  const [audio] = useState(new Audio(Gsharp));
 
   return (
     <div onClick={() => {
-      toggle()
+      audio.play()
       let copy = {...notes}
       copy[note] = !copy[note]
       setNotes(copy)

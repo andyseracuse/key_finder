@@ -24,11 +24,11 @@ const useAudio = file => {
 };
 
 const DNatural = ({ notes, note, setNotes }) => {
-  const [playing, toggle] = useAudio(D);
+  const [audio] = useState(new Audio(D));
 
   return (
     <div onClick={() => {
-      toggle()
+      audio.play()
       let copy = {...notes}
       copy[note] = !copy[note]
       setNotes(copy)
